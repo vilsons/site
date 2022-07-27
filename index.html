@@ -3,6 +3,7 @@
       <head>
         <title>Vilson</title>
         <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!--- <link rel="stylesheet" href=""> -->
 		<style>
 			
@@ -13,19 +14,19 @@
 				font-size: 100%;
 			}
 
-			nav{
+			#navegacao-principal{
 				position: relative;
 				font-family: monospace;
 				float: left;
 				width: 100%;
 			}
 
-			ul{
+			#menu-principal{
 				list-style: none;
 				padding-left: 0;
 			}
 
-			li{
+			#menu-principal li{
 				background-color: #333;
 				display: block;
 				float: left;
@@ -35,13 +36,13 @@
 				transition-duration: 0,5s;
 			}
 
-			li a{
+			#menu-principal li a{
 				color: #ccc;
 				text-decoration: none;
 				
 			}
 
-			li ul{
+			.dropdown{
 				visibility: hidden;
 				opacity: 0;
 				min-width: 5rem;
@@ -52,53 +53,100 @@
 				display: none;
 				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 			}
-			li ul li{
+			.dropdown{
 				clear: both;
 				width: 100;
 			}
-			ul li:hover,
-			ul li:focus-within{
+			#menu-principal li:hover,
+			#menu-principal li:focus-within{
 				background-color: #4caf50;
 				cursor: pointer;
 				font-weight: bold;
 				transition: 0.3s;
 			}
 
-			a:hover{
-				color: aqua;
+			#menu-principal a:hover{
+				color: #4caf;
 			}
 			
 			/*Controla a exibição do dropdown*/
-			ul li:hover>ul,
-			ul li:focus-within>ul,
-			ul li ul:hover,
-			ul li ul:focus{
+			#menu-principal li:hover>ul,
+			#menu-principal li:focus-within>ul,
+			.dropdown ul:hover,
+			.dropdown ul:focus{
 				visibility: visible;
 				opacity: 1;
 				display: block;
 			} 
 
+			/*Ajustar o conteudo para Smartphones*/
+			@media screen and (max-width:480px) {
+				body {
+					max-width: 480px;
+					font-size: 1.0em;
+
+				}
+
+				#menu-principal{
+				width: auto;
+				height: auto;
+				background-color: rgb(204, 60, 60);
+				}
+
+				#menu-principal li{
+					background-color: tomato;
+					text-decoration: none;
+					width: 100;
+					float: none;
+				}
+
+				#menu-principal li {
+					color: #fff;
+					text-align: left;
+					display: block;
+					outline: none;
+				}
+
+				/*Controla a exibição do dropdown*/
+				#menu-principal li:hover>ul,
+				#menu-principal li:focus-within>ul,
+				#menu-principal li a:hover{
+					cursor: pointer;
+					font-weight: bold;
+					color: #f00;
+					background-color: rgb(230, 140, 140);
+					transition: 0.3s;
+					left: 10px;
+				}
+
+				.dropdown{
+				position: static;
+				left: 0px;
+				background-color:rgb(204, 60, 60) ;
+				list-style: none;
+				}
+			}
 		</style>
       </head>
       <body>
-        <nav>
-			<ul>
+        <nav id="navegacao-principal">
+			<ul id="menu-principal">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="#">Sobre Min</a>
-					<ul>
+					<ul class="dropdown">
 						<li><a href="#">Meu Pojeto</a></li>
 						<li><a href="#">Meu Currículo</a></li>
 						<li><a href="#">Meus Hobies</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Entre em contato</a>
-					<ul>
+				<li><a href="">Entre em contato</a>
+					<ul class="dropdown">
 						<li><a href="https://web.whatsapp.com/">Whatsapp</a></li>
 						<li><a href="#">(63)98429-1936</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Redes Sociais</a>
-					<ul>
+				<li><a href="">Redes Sociais</a>
+					<ul class="dropdown">
 						<li><a href="https://pt-br.facebook.com/">Facebook</a></li>
 						<li><a href="https://www.youtube.com/">Youtube</a></li>
 						<li><a href="https://www.instagram.com/cachoeiradoabade_/">Instagram</a></li>
@@ -106,6 +154,19 @@
 				</li>
 			</ul>
 		</nav>
+		<br>
+	
+		<h1>
+			Nova Carteira de Identidade Nacional <br>começa a ser emitida nesta terça
+		</h1>
+		<h6>Por Gabrielly Bento, editado por Acsa Gomes 	&emsp;&emsp;&emsp;&emsp;	 26/07/2022 11h36, atualizada em 26/07/2022 21h36</h6>
+		<br>
+		<br>
+		<p>Nesta terça-feira (26), o estado do Rio Grande do Sul começa a emitir a nova carteira de identidade (CIN). O documento possui apenas 
+			o CPF como registro geral e único para todos os brasileiros em qualquer lugar do país.</p>
+		<p>Posteriormente, outros estados irão adotar esse novo meio de identidade também, como o Acre, Distrito Federal, Goiás, Minas e Paraná. 
+			Vale ressaltar que ainda não há previsão para os demais Estados brasileiros.</p>
+		<br>
 		<a href="https://www.google.com/">http://www.google.com</a>
 	    <p> <input type="button" value="Abade vamons estudar kkkk 😁😂"></p>
 		
