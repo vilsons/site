@@ -3,30 +3,125 @@
       <head>
         <title>Vilson</title>
         <meta charset="utf-8">
+		<!--- <link rel="stylesheet" href=""> -->
+		<style>
+			
+			*{margin: 0; padding: 0;}
+
+			body{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 100%;
+			}
+
+			nav{
+				position: relative;
+				font-family: monospace;
+				float: left;
+				width: 100%;
+			}
+
+			ul{
+				list-style: none;
+				padding-left: 0;
+			}
+
+			li{
+				background-color: #333;
+				display: block;
+				float: left;
+				padding: 1rem;
+				position: relative;
+				text-decoration: none;
+				transition-duration: 0,5s;
+			}
+
+			li a{
+				color: #ccc;
+				text-decoration: none;
+				
+			}
+
+			li ul{
+				visibility: hidden;
+				opacity: 0;
+				min-width: 5rem;
+				position: absolute;
+				transition: all 0.5s ease;
+				margin-top: 1rem;
+				left: 0;
+				display: none;
+				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			}
+			li ul li{
+				clear: both;
+				width: 100;
+			}
+			ul li:hover,
+			ul li:focus-within{
+				background-color: #4caf50;
+				cursor: pointer;
+				font-weight: bold;
+				transition: 0.3s;
+			}
+
+			a:hover{
+				color: aqua;
+			}
+			
+			/*Controla a exibição do dropdown*/
+			ul li:hover>ul,
+			ul li:focus-within>ul,
+			ul li ul:hover,
+			ul li ul:focus{
+				visibility: visible;
+				opacity: 1;
+				display: block;
+			} 
+
+		</style>
       </head>
       <body>
-        <p>Aqui vai o código <strong>HTML</strong> que fará seu site aparecer.</p>
-		<input type="checkbox" id="meio1" name="meio1" value="Computador">
-		<label for="meio1">Computador</label>
-		<input type="submit" value="OK"> <!--value representa o valor que vai apresentar dentro do botão -->
-		<ol>
-			<li> vilson</li>
-			<li> vilson Sousa</li>
-			<li> vilson sousa dos</li>
-			<li> vilson sousa dos santos</li>
-		</ol>
-		<ul>
-			<li> vilson</li>
-			<li> vilson Sousa</li>
-			<li> vilson sousa dos</li>
-			<li> vilson sousa dos santos</li>
-			<li><a href="./html/formulario.html">Formulario de Cadrastro</a> </li>
-		</ul>
+        <nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Sobre Min</a>
+					<ul>
+						<li><a href="#">Meu Pojeto</a></li>
+						<li><a href="#">Meu Currículo</a></li>
+						<li><a href="#">Meus Hobies</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Entre em contato</a>
+					<ul>
+						<li><a href="https://web.whatsapp.com/"></a>Whatsapp</li>
+						<li><a href="#">(63)98429-1936</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Redes Sociais</a>
+					<ul>
+						<li><a href="https://pt-br.facebook.com/">Facebook</a></li>
+						<li><a href="https://www.youtube.com/">Youtube</a></li>
+						<li><a href="https://www.instagram.com/">Instagram</a></li>
+					</ul>
+				</li>
+			</ul>
+		<!--	<ul>
+				<li> vilson</li>
+				<li> vilson Sousa</li>
+				<li> vilson sousa dos</li>
+				<li> vilson sousa dos santos</li>
+				<li><a href="./html/formulario.html">Formulario de Cadrastro</a></li>
+			</ul> -->
+		</nav>
 		<a href="https://www.google.com/">http://www.google.com</a>
 	    <p> <input type="button" value="Abade vamons estudar kkkk 😁😂"></p>
 		
 		<P><a href="mailto:vilson.santos@estudante.edu.br">Entre em contato por email</a></P>
 		<P><a href="html/estruturaSemantica.html">Estrutura Semantica</a></P>
 		<button type="button">Abade vamons estudar kkkk 😁😹</button>
+		<p>Aqui vai o código <strong>HTML</strong> que fará seu site aparecer.</p>
+		<input type="checkbox" id="meio1" name="meio1" value="Computador">
+		<label for="meio1">Computador</label>
+		<input type="submit" value="OK"> <!--value representa o valor que vai apresentar dentro do botão -->
       </body>
     </html>
